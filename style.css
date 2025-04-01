@@ -108,3 +108,8 @@ body{
     top:30px;
     transform:rotate(-45deg);
 }
+
+.quote div{
+    padding:1rem 2.5rem;
+    font-size: 20px;
+}

@@ -5,7 +5,7 @@ const likeQuote = document.getElementById("likeQuote");
 const likeList = document.getElementById("likeList");
 function generateQuote() {
     let div = document.createElement("div");
-    quote.innerHTML =`Loading New Quotes..`;
+    quote.innerHTML =`Loading New Quotes... <i class="fa-solid fa-sync fa-spin"></i>`
     fetch("https://api.api-ninjas.com/v1/quotes",{
         headers: {
             "X-Api-Key":"1cI36n+FTC++SdEkHhoo8A==uetXzgzY1LomElJU"}
@@ -14,7 +14,19 @@ function generateQuote() {
         .then((data)=>{
         console.log(data);
 
-        quote.innerHTML = data[0].quote;
+        quote.innerHTML="";
+        div.innerHTML = data[0].quote;
+        quote.append(div);
     })
 }
-generateQuote();
+function LikeQuote(){
+    if(likeQuote.style.color=="red"){
+        likeQuote.removeAttribute("class");
+        likeQuote.setAttribute("class","fa-regular fa-heart");
+        likeQuote.style.color="black";
+    }
+    else{
+    likeQuote.setAttribute("class","fa-solid fa-heart");
+    likeQuote.style.color="red";
+    }
+}
