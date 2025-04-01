@@ -30,3 +30,10 @@ function LikeQuote(){
     likeQuote.style.color="red";
     }
 }
+function CopyQuote(){
+    navigator.clipboard.writeText(quote.innerText);    
+}
+function TwitterQuote(){
+    let twitterUrl=`https://twitter.com/intent/tweet?url=${quote.innerText}`;
+    window.open(twitterUrl,"_blank");
+}
