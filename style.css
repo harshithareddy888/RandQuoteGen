@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Oswald", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    position: relative;
+    width: 600px;
+    width:90%;
+    min-height: 250px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.container h2{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid lightblue
+}
+.buttons button{
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: lightblue;
+    color: #fff;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+}
