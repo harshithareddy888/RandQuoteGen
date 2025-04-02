@@ -1,4 +1,4 @@
-const apiKey= CONFIG.API_KEY;
+
 const quote = document.querySelector(".quote");
 const generate=document.getElementById("generate");
 const category = document.getElementById("category");
@@ -9,7 +9,7 @@ function generateQuote() {
     quote.innerHTML =`Loading New Quotes... <i class="fa-solid fa-sync fa-spin"></i>`
     fetch("https://api.api-ninjas.com/v1/quotes",{
         headers: {
-            "X-Api-Key":apiKey
+            "X-Api-Key":"1cI36n+FTC++SdEkHhoo8A==uetXzgzY1LomElJU"
         }
     })
     .then(response => response.json())
